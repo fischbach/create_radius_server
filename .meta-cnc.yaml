@@ -15,7 +15,7 @@ labels:
 variables:
   - name: ssl_tls_service_profile
     description: Gateway-1 and Portal-1 - SSL TLS Service Profile
-    default: ssl_tls_service_profile
+    default: ssl_tls_service_profile_1
     type_hint: text
 
 snippets:
