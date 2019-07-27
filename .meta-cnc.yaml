@@ -1,8 +1,8 @@
 
 name: create _ssl_tls_svc_profile
-label: 1. Create an SSL/TLS Service profile
+label: 4. Create an SSL/TLS Service profile
 
-description: Create an SSL/TLS Service profile using just created certificates
+description: Create an SSL/TLS Service profile using just created server certificate
 
 extends:
 
@@ -14,11 +14,11 @@ labels:
 
 variables:
   - name: ssl_tls_service_profile
-    description: Gateway-1 and Portal-1 - SSL TLS Service Profile
-    default: ssl_tls_service_profile_1
+    description: SSL TLS Service Profile to be used for captive portal
+    default: cp-ssl-tls-service-profile
     type_hint: text
 
 snippets:
     - name: ssl_tls_profile
       xpath: /config/shared/ssl-tls-service-profile
-      file: 0-ssl_tls_profile.xml
+      file: 0-ssl-tls-profile.xml
