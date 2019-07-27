@@ -1,5 +1,5 @@
 
-name: create _radius_server
+name: create_radius_server
 label: 5. Create a RADIUS server configuration - DUOAUTHPROXY example
 
 description: Create a RADIUS server
