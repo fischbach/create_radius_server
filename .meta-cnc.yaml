@@ -1,8 +1,8 @@
 
-name: create _ssl_tls_svc_profile
-label: 4. Create an SSL/TLS Service profile - xml
+name: create _radius_server
+label: 4. Create a RADIUS server configuration - DUOAUTHPROXY example
 
-description: Create an SSL/TLS Service profile using just created server certificate
+description: Create a RADIUS server
 
 extends:
 
@@ -13,12 +13,29 @@ labels:
     - X509 Certificates
 
 variables:
-  - name: ssl_tls_service_profile
-    description: SSL TLS Service Profile to be used for captive portal
-    default: cp-ssl-tls-service-profile
+  - name: server_name
+    description: Name of the server
+    default: Duo_proxy
     type_hint: text
+  - name: server_vendor
+    description: What vendor is the Radius server?
+    default: duo
+    type_hint: text
+  - name: radius_secret
+    description: The Radius secret must match what is configreed in the RADIUS server
+    default: paloalto
+    type_hint: text
+  - name: radius_port
+    description: The port Radius will use to talk to the server
+    default: 1812
+    type_hint: text
+  - name: radius_server_ip_address
+    description: Radius server IP address
+    default: 192.168.55.20
+    type_hint: text
+  - name:
 
 snippets:
-    - name: ssl_tls_profile
-      xpath: /config/shared/ssl-tls-service-profile
-      file: 0-ssl-tls-profile.xml
+    - name: radius_server
+      xpath: /config/shared/server-profile/radius
+      file: 0-radius_server.xml
