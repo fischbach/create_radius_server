@@ -1,6 +1,6 @@
 
 name: create _ssl_tls_svc_profile
-label: 4. Create an SSL/TLS Service profile
+label: 4. Create an SSL/TLS Service profile - xml
 
 description: Create an SSL/TLS Service profile using just created server certificate
 
